@@ -63,14 +63,50 @@ def edit(request):
         form = ProfileForm()
     return render(request, 'edit_profile.html', locals())
 
+
 def search_results(request):
     if 'search' in request.GET and request.GET['search']:
         search_term = request.GET.get('search')
         searched_project = Project.search_by_project(search_term)
         message = f"{search_term}"
 
-        return render(request, 'search.html',locals())
+        return render(request, 'search.html', locals())
 
     else:
         message = "You haven't searched for any term"
-        return render(request,'search.html',{"message":message})
+        return render(request, 'search.html', {"message": message})
+
+
+def project(request, project_id):
+    try:
+        project = Project.objects.get(id=project_id)
+        rating = round(
+            ((project.design + project.usability + project.content) / 3), 2)
+        if request.method == 'POST':
+            form = VoteForm(request.POST)
+            if form.is_valid:
+                if project.design == 1:
+                    project.design = int(request.POST['design'])
+                else:
+                    project.design = (project.design +
+                                      int(request.POST['design'])) / 2
+                if project.usability == 1:
+                    project.usability = int(request.POST['usability'])
+                else:
+                    project.usability = (project.design +
+                                         int(request.POST['usability'])) / 2
+                if project.content == 1:
+                    project.content = int(request.POST['content'])
+                else:
+                    project.content = (project.design +
+                                       int(request.POST['content'])) / 2
+                project.save()
+        else:
+            form = VoteForm()
+    except DoesNotExist:
+        raise Http404()
+    return render(request, "project.html", {
+        'form': form,
+        'project': project,
+        'rating': rating
+    })
