@@ -6,77 +6,56 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Awwwards</title>
 
+    <title>Awwwwards</title>
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-    <!-- Bootstrap core CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Material Design Bootstrap -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.7/css/mdb.min.css" rel="stylesheet">
+    {% block styles %}
+    {% bootstrap_css %}
     <link rel="stylesheet" href="{% static 'css/project.css'%}">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
     <link rel="stylesheet" href="https://use.typekit.net/qhm8wqj.css" />
 
+    {% endblock %}
 
 </head>
+{% include 'navbar.html' %}
 
 <body>
-
+<h1 class="fancy-link" style="text-align: center">PROFILE.</h1>
     <div class="container">
 
-        <div class="w3-display-container" style="max-height:300px; height: 20vh">
-
-            <div class="w3-display-middle w3-large">
-            </div>
-            <div class="w3-display-topleft w3-container w3-padding">
-                <a href="{% url 'home' %}"><i class="fas fa-long-arrow-alt-left fa-2x " style="color:white"></i></a>
-
-            </div>
-            <div class="w3-display-topright w3-container w3-padding w3-margin">
-
-                <div class="w3-dropdown-hover">
-                    <button class="w3-button"><i class="fas fa-cog fa-2x" style="color:white"></i>
-                    </button>
 
 
-                    <div class="w3-dropdown-content w3-bar-block w3-card-4">
-                        <a href="{% url 'update_profile' %}" class="w3-bar-item w3-button">Update Profile</a>
-
-
-                        <a href="/logout" class="w3-bar-item w3-button">Logout</a>
-                    </div>
-                </div>
-            </div>
-            <div class="w3-display-topmiddle w3-container">
-                <h1 class="profile-user-name" style="font-size: 25px; color:white">{{profile.profile.full_name}}</h1>
-            </div>
-            <div class="w3-display-bottommiddle w3-container">
+        <h1 class="button button-one" style="font-size: 25px; color:white">{{profile.profile.full_name}}</h1>
+        <div class="content content--card">
+            <div class="card">
                 {% if profile.profile.profile_pic%}
                 <img src="{{profile.profile.profile_pic.url}}" width="100px" height="100px " alt=""
                     class="img-responsive" style="border-radius:50%">
                 {% endif %}
+                <h class="card__title">{{user.username}}</h>
+                <p class="card__body">{{user.profile.Bio}}.</p>
+
             </div>
-        </div>
-
-        <div class="w3-center">
-            <p style="font-size: 20px;"><span class="profile-real-name"><strong>{{user.username}}</strong></span>
-                <br>
-                <p>{{user.profile.Bio}}</p>
-            </p>
-
 
         </div>
 
-        <hr>
-        <div class="w3-container">
+        <div class="w3-display-bottommiddle w3-container">
+
+        </div>
+
+
+
+        <div class="">
 
 
             <div class="w3-row">
@@ -135,17 +114,14 @@
             <div class="content content--card">
                 <div class="card">
                     <h3 class="card__title">Contact Information</h3>
-                    <p class="card__body">
-                        <div class="w3-container w3-margin">
-
-                            <p><i class="fas fa-at"></i> {{user.email}}</p>
-                            <hr>
-                            <p><i class="fas fa-map-marker-alt"></i> {{profile.profile.address}}</p>
-                            <hr>
-                            <p><i class="fas fa-phone"></i> {{profile.profile.phone_number}}</p>
-                            <hr>
-                        </div>
-                    </p>
+                    <div class="card__body">
+                        <p><i class="fas fa-at"></i> {{user.email}}</p>
+                        <hr>
+                        <p><i class="fas fa-map-marker-alt"></i> {{profile.profile.address}}</p>
+                        <hr>
+                        <p><i class="fas fa-phone"></i> {{profile.profile.phone_number}}</p>
+                        <hr>
+                    </div>
                 </div>
 
             </div>
@@ -156,7 +132,15 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         {% bootstrap_javascript %}
         {% endblock %}
-    </div>
+
+        <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+        <script src="{% static 'js/oscars.js' %}"></script>
+        {% block javascript %}
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js">
+        </script>
+        <script src="https://use.fontawesome.com/191e478c5e.js"></script>
+        <script src="static/js/gulpfile.js"></script>
+        {% endblock %}
 
 </body>
 
