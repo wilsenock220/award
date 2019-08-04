@@ -62,3 +62,15 @@ def edit(request):
     else:
         form = ProfileForm()
     return render(request, 'edit_profile.html', locals())
+
+def search_results(request):
+    if 'search' in request.GET and request.GET['search']:
+        search_term = request.GET.get('search')
+        searched_project = Project.search_by_project(search_term)
+        message = f"{search_term}"
+
+        return render(request, 'search.html',locals())
+
+    else:
+        message = "You haven't searched for any term"
+        return render(request,'search.html',{"message":message})
