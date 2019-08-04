@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.5/css/mdb.min.css" rel="stylesheet">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="static/scss/main.scss" />
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <a href="#" class="site-logo" aria-label="homepage">IntObs</a>
+            <nav class="main-nav">
+                <ul class="nav__list">
+                    <p class="nav__list-item"><a href="#" class="nav__link">Home</a></p>
+                    <p class="nav__list-item">
+                        <a href="#" class="nav__link">About</a>
+                    </p>
+                    <p class="nav__list-item">
+                        <a href="#" class="nav__link">Another page</a>
+                    </p>
+                    <p class="nav__list-item">
+                        <a href="#" class="nav__link">Pricing</a>
+                        </>
+                        <p class="nav__list-item"><a href="#" class="nav__link">Blog</a></p>
+                </ul>
+            </nav>
+            <nav class="account">
+                <ul class="nav__list">
+                    <p class="nav__list-item">
+                        <a class="nav__link nav__link--btn" href="#">Login</a>
+                    </p>
+                    <p class="nav__list-item">
+                        <a class="nav__link nav__link--btn nav__link--btn--highlight" href="#">Join</a>
+                    </p>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    {% block content %}
+    {%endblock%}
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+    The
+    <script src="static/js/main.js"></script>
+
+    <script src="static/js/observers.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,252 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<main>
+    <section class="home-intro">
+        <h1>Intersection Observer is pretty useful</h1>
+    </section>
+    <div class="container" id="circle">
+        <div class="container py-5">
+            <div class="row">
+
+                <div class="col-lg-12 mx-auto mb-5 text-white text-center">
+                    <h1 class="display-4">Skills</h1>
+                </div>
+
+                <div class="col-xl-3 col-lg-6 mb-4">
+                    <div class="bg-white rounded-lg p-5 shadow">
+                        <h2 class="h6 font-weight-bold text-center mb-4">Overall progress</h2>
+
+                        <!-- Progress bar 1 -->
+                        <div class="progress mx-auto" data-value='80'>
+                            <span class="progress-left">
+                                <span class="progress-bar border-primary"></span>
+                            </span>
+                            <span class="progress-right">
+                                <span class="progress-bar border-primary"></span>
+                            </span>
+                            <div
+                                class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                                <div class="h2 font-weight-bold">80<sup class="small">%</sup></div>
+                            </div>
+                        </div>
+                        <!-- END -->
+
+                        <!-- Demo info -->
+                        <div class="row text-center mt-4">
+                            <div class="col-6 border-right">
+                                <div class="h4 font-weight-bold mb-0">28%</div><span class="small text-gray">Last
+                                    week</span>
+                            </div>
+                            <div class="col-6">
+                                <div class="h4 font-weight-bold mb-0">60%</div><span class="small text-gray">Last
+                                    month</span>
+                            </div>
+                        </div>
+                        <!-- END -->
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-6 mb-4">
+                    <div class="bg-white rounded-lg p-5 shadow">
+                        <h2 class="h6 font-weight-bold text-center mb-4">Work hours</h2>
+
+                        <!-- Progress bar 2 -->
+                        <div class="progress mx-auto" data-value='25'>
+                            <span class="progress-left">
+                                <span class="progress-bar border-danger"></span>
+                            </span>
+                            <span class="progress-right">
+                                <span class="progress-bar border-danger"></span>
+                            </span>
+                            <div
+                                class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                                <div class="h2 font-weight-bold">25<sup class="small">%</sup></div>
+                            </div>
+                        </div>
+                        <!-- END -->
+
+                        <!-- Demo info-->
+                        <div class="row text-center mt-4">
+                            <div class="col-6 border-right">
+                                <div class="h4 font-weight-bold mb-0">28%</div><span class="small text-gray">Last
+                                    week</span>
+                            </div>
+                            <div class="col-6">
+                                <div class="h4 font-weight-bold mb-0">60%</div><span class="small text-gray">Last
+                                    month</span>
+                            </div>
+                        </div>
+                        <!-- END -->
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-6 mb-4">
+                    <div class="bg-white rounded-lg p-5 shadow">
+                        <h2 class="h6 font-weight-bold text-center mb-4">Server time</h2>
+
+                        <!-- Progress bar 3 -->
+                        <div class="progress mx-auto" data-value='76'>
+                            <span class="progress-left">
+                                <span class="progress-bar border-success"></span>
+                            </span>
+                            <span class="progress-right">
+                                <span class="progress-bar border-success"></span>
+                            </span>
+                            <div
+                                class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                                <div class="h2 font-weight-bold">76<sup class="small">%</sup></div>
+                            </div>
+                        </div>
+                        <!-- END -->
+
+                        <!-- Demo info -->
+                        <div class="row text-center mt-4">
+                            <div class="col-6 border-right">
+                                <div class="h4 font-weight-bold mb-0">28%</div><span class="small text-gray">Last
+                                    week</span>
+                            </div>
+                            <div class="col-6">
+                                <div class="h4 font-weight-bold mb-0">60%</div><span class="small text-gray">Last
+                                    month</span>
+                            </div>
+                        </div>
+                        <!-- END -->
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-6 mb-4">
+                    <div class="bg-white rounded-lg p-5 shadow">
+                        <h2 class="h6 font-weight-bold text-center mb-4">Total overdue</h2>
+
+                        <!-- Progress bar 4 -->
+                        <div class="progress mx-auto" data-value='12'>
+                            <span class="progress-left">
+                                <span class="progress-bar border-warning"></span>
+                            </span>
+                            <span class="progress-right">
+                                <span class="progress-bar border-warning"></span>
+                            </span>
+                            <div
+                                class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                                <div class="h2 font-weight-bold">12<sup class="small">%</sup></div>
+                            </div>
+                        </div>
+                        <!-- END -->
+
+                        <!-- Demo info -->
+                        <div class="row text-center mt-4">
+                            <div class="col-6 border-right">
+                                <div class="h4 font-weight-bold mb-0">28%</div><span class="small text-gray">Last
+                                    week</span>
+                            </div>
+                            <div class="col-6">
+                                <div class="h4 font-weight-bold mb-0">60%</div><span class="small text-gray">Last
+                                    month</span>
+                            </div>
+                        </div>
+                        <!-- END -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="home-about">
+        <h2>About us</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        <div class="card-deck">
+            <div class="columns">
+                <div class="col fade-in">
+                    <h3>Lorem, ipsum.</h3>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae
+                        maiores fuga eos provident voluptas perferendis.
+                    </p>
+                </div>
+                <div class="col fade-in">
+                    <h3>A, illo!</h3>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Voluptatibus minima quo beatae eius blanditiis officiis.
+                    </p>
+                </div>
+                <div class="col fade-in">
+                    <h3>Repudiandae, error?</h3>
+                    <p>
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum
+                        quasi quis doloribus quia illum laudantium.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="home-more-stuff">
+        <div class="more-stuff-grid">
+            <img src="https://unsplash.it/400" alt="" class="slide-in from-left" />
+            <p class="slide-in from-right">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis fugit,
+                quae beatae vero sit magni quaerat id ratione. Dolor optio unde amet
+                omnis sapiente neque cumque consequuntur reiciendis deserunt.
+                Dolorem vero exercitationem consequuntur, eligendi cupiditate
+                debitis facilis quibusdam magni. Eveniet.
+            </p>
+        </div>
+        <div class="more-stuff-grid">
+            <p class="slide-in from-left">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis fugit,
+                quae beatae vero sit magni quaerat id ratione. Dolor optio unde amet
+                omnis sapiente neque cumque consequuntur reiciendis deserunt.
+                Dolorem vero exercitationem consequuntur, eligendi cupiditate
+                debitis facilis quibusdam magni. Eveniet.
+            </p>
+            <img src="https://unsplash.it/401" alt="" class="slide-in from-right" />
+        </div>
+        <div class="more-stuff-grid">
+            <img src="//unsplash.it/400" alt="" class="slide-in from-left" />
+            <p class="slide-in from-right">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis fugit,
+                quae beatae vero sit magni quaerat id ratione. Dolor optio unde amet
+                omnis sapiente neque cumque consequuntur reiciendis deserunt.
+                Dolorem vero exercitationem consequuntur, eligendi cupiditate
+                debitis facilis quibusdam magni. Eveniet.
+            </p>
+        </div>
+        <div class="more-stuff-grid">
+            <p class="slide-in from-left">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis fugit,
+                quae beatae vero sit magni quaerat id ratione. Dolor optio unde amet
+                omnis sapiente neque cumque consequuntur reiciendis deserunt.
+                Dolorem vero exercitationem consequuntur, eligendi cupiditate
+                debitis facilis quibusdam magni. Eveniet.
+            </p>
+            <img src="https://unsplash.it/401" alt="" class="slide-in from-right" />
+        </div>
+        <div class="more-stuff-grid">
+            <img src="//unsplash.it/400" alt="" class="slide-in from-left" />
+            <p class="slide-in from-right">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis fugit,
+                quae beatae vero sit magni quaerat id ratione. Dolor optio unde amet
+                omnis sapiente neque cumque consequuntur reiciendis deserunt.
+                Dolorem vero exercitationem consequuntur, eligendi cupiditate
+                debitis facilis quibusdam magni. Eveniet.
+            </p>
+        </div>
+        <div class="more-stuff-grid">
+            <p class="slide-in from-left">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis fugit,
+                quae beatae vero sit magni quaerat id ratione. Dolor optio unde amet
+                omnis sapiente neque cumque consequuntur reiciendis deserunt.
+                Dolorem vero exercitationem consequuntur, eligendi cupiditate
+                debitis facilis quibusdam magni. Eveniet.
+            </p>
+            <img src="https://unsplash.it/401" alt="" class="slide-in from-right" />
+        </div>
+    </div>
+</main>
+{% include "footer.html" %}
+
+{% endblock %}
