@@ -142,3 +142,10 @@ def vote_project(request, project_id):
         'project': project,
         'rating': rating
     })
+
+
+class ProjectList(APIView):
+    def get(self, request, format=None):
+        all_proj = Project.objects.all()
+        serializers = ProjectSerializer(all_proj, many=True)
+        return Response(serializers.data)
