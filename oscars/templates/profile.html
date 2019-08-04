@@ -6,9 +6,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Awwwwards</title>
+    <title>Awwwards</title>
 
-    {% block styles %}
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
@@ -23,8 +22,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/main.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/qhm8wqj.css" />
 
-    {% endblock %}
 
 </head>
 
@@ -132,23 +132,25 @@
                 {% endfor %}
             </div>
 
-            <div class="w3-card-4 w3-white w3-padding w3-margin ">
-                <header>
-                    <h2>Contact Information</h2>
-                    <hr>
-                </header>
-                <div class="w3-container w3-margin">
+            <div class="content content--card">
+                <div class="card">
+                    <h3 class="card__title">Contact Information</h3>
+                    <p class="card__body">
+                        <div class="w3-container w3-margin">
 
-                    <p><i class="fas fa-at"></i> {{user.email}}</p>
-                    <hr>
-                    <p><i class="fas fa-map-marker-alt"></i> {{profile.profile.address}}</p>
-                    <hr>
-                    <p><i class="fas fa-phone"></i> {{profile.profile.phone_number}}</p>
-                    <hr>
+                            <p><i class="fas fa-at"></i> {{user.email}}</p>
+                            <hr>
+                            <p><i class="fas fa-map-marker-alt"></i> {{profile.profile.address}}</p>
+                            <hr>
+                            <p><i class="fas fa-phone"></i> {{profile.profile.phone_number}}</p>
+                            <hr>
+                        </div>
+                    </p>
                 </div>
 
-
             </div>
+
+
         </div>
         {% block scripts %}
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
