@@ -47,3 +47,18 @@ def profile(request, username):
     title = f'@{profile.username} awwward projects and screenshots'
 
     return render(request, 'profile.html', locals())
+
+
+def edit(request):
+    profile = User.objects.get(username=request.user)
+
+    if request.method == 'POST':
+        form = ProfileForm(request.POST, request.FILES)
+        if form.is_valid():
+            edit = form.save(commit=False)
+            edit.user = request.user
+            edit.save()
+            return redirect('update_profile')
+    else:
+        form = ProfileForm()
+    return render(request, 'edit_profile.html', locals())
