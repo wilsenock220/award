@@ -14,7 +14,8 @@ urlpatterns = [
     url(r'^project/(?P<project_id>\d+)', views.project, name='project'),
     url(r'^rate/(\d+)', views.vote_project, name='rate'),
     url(r'^api/profile/$', views.ProfileList.as_view()),
-    url(r'^api/project/$', views.ProjectList.as_view())
+    url(r'^api/project/$', views.ProjectList.as_view()),
+    url('register/', views.register, name='register'),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,

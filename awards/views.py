@@ -18,6 +18,26 @@ def home(request):
     return render(request, 'home.html', locals())
 
 
+def register(request):
+    if request.method == 'POST':
+        form = UserRegisterForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            messages.success(
+                request,
+                f'Your account has been created! You are now able to log in')
+            return redirect('login')
+    else:
+        form = UserRegisterForm()
+    return render(request, 'register.html', {'form': form})
+
+
+def login(request):
+    form = LoginForm
+    return render(request, '.html', locals())
+
+
 @login_required(login_url='/accounts/login/')
 def upload_project(request):
     current_user = request.user

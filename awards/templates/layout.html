@@ -30,17 +30,26 @@
             <a href="#" class="site-logo" aria-label="homepage">IntObs</a>
             <nav class="main-nav">
                 <ul class="nav__list">
-                    <p class="nav__list-item"><a href="#" class="nav__link">Home</a></p>
+                    <p class="nav__list-item"><a href="{% url 'index' %}" class="nav__link">Home</a></p>
+                    {% if user.is_authenticated %}
+
                     <p class="nav__list-item">
-                        <a href="#" class="nav__link">About</a>
+                        <a href="/upload" class="nav__link">Submit Project</a>
                     </p>
                     <p class="nav__list-item">
-                        <a href="#" class="nav__link">Another page</a>
+                        <a href="{% url 'profile' username=user %}" class="nav__link">Profile</a>
                     </p>
                     <p class="nav__list-item">
-                        <a href="#" class="nav__link">Pricing</a>
-                        </>
-                        <p class="nav__list-item"><a href="#" class="nav__link">Blog</a></p>
+                        <a href="{% url 'update_profile'%}" class="nav__link">Update Profile</a>
+                    </p>
+                    <p class="nav__list-item">
+                        <a href="/logout" class="nav__link">Logout</a>
+                    </p>
+                    {% else %}
+                    <p class="nav__list-item">
+                        <a class="nav__link nav__link--btn" href="/accounts/login">Login</a>
+                    </p>
+                    {% endif %}
                 </ul>
             </nav>
             <nav class="account">
