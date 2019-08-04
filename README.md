@@ -1,12 +1,12 @@
-# Nimo-Awwwward
+# Awwward
 A web application that rates uploaded projects.
 
-## By Wairimu Maina
+## By Wilstan Onditi
 A student at Moringa School and an aspiring software developer.
 
 
 ## Description
-Nimo-awards is a site where users can upload projects, they can view projects uploaded by other users, rate projects according to design, usability and content and the average rate is displayed for each.   
+Awwards is a site where users can upload projects, they can view projects uploaded by other users, rate projects according to design, usability and content and the average rate is displayed for each.   
 
 ## Specifications
 * Users can view projects
@@ -31,7 +31,7 @@ Nimo-awards is a site where users can upload projects, they can view projects up
 * Django
 
 ## Application link
-https://nimo-awards.herokuapp.com/
+https://wil-awards.herokuapp.com/
 
 ## Prerequisites
 * Python 3.6 required
@@ -39,7 +39,7 @@ https://nimo-awards.herokuapp.com/
 
 ## Setup/Installation Requirements
 Follow the following commands to run the project
-* git clone/download ```https://github.com/nimomaina/Awwwards.git```
+* git clone/download ```https://github.com/wilsenock220/award.git```
 * cd Awwwards
 * Install required files in requirements.txt
 * Run ```python3.6 manage.py runserver```
@@ -50,7 +50,7 @@ Follow the following commands to run the project
 None known at the moment.
 
 ## Support and contact details
-In case of clarification email me at nimomaina.nm@gmail.com
+In case of clarification email me at wilsenock220@gmail.com
 
 ### License
-Copyright (c) 2019 **Wairimu Maina**
+Copyright (c) 2019 **Wilstan Onditi**
