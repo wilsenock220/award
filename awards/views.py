@@ -149,3 +149,10 @@ class ProjectList(APIView):
         all_proj = Project.objects.all()
         serializers = ProjectSerializer(all_proj, many=True)
         return Response(serializers.data)
+
+
+class ProfileList(APIView):
+    def get(self, request, format=None):
+        all_profile = Project.objects.all()
+        serializers = ProfileSerializer(all_profile, many=True)
+        return Response(serializers.data)
