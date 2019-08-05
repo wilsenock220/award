@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-
-# AWWARDS
-=======
 # Awwward
->>>>>>> 93d0c872df12167f131a84755834542491b0cdf3
+
 A web application that rates uploaded projects.
 
 ## By Wilstan Onditi
@@ -35,7 +31,6 @@ Awwards is a site where users can upload projects, they can view projects upload
 2. [virtualenv](https://virtualenv.pypa.io/en/stable/installation/)
 3. [Pip](https://pip.pypa.io/en/stable/installing/)
 
-<<<<<<< HEAD
 #### Technologies used
    - Python 3.6
    - HTML
@@ -43,22 +38,18 @@ Awwards is a site where users can upload projects, they can view projects upload
    - Heroku
    - Postgresql
    - Django
-=======
 ## Application link
 https://wil-awards.herokuapp.com/
->>>>>>> 93d0c872df12167f131a84755834542491b0cdf3
-
 #### Clone the Repo and rename it to suit your needs.
 bash
 git clone https://github.com/wilsenock220/award
 
-<<<<<<< HEAD
 #### Initialize git and add the remote repository
 bash
 git init
 bash
 git remote add origin <your-repository-url>
-=======
+
 ## Setup/Installation Requirements
 Follow the following commands to run the project
 * git clone/download ```https://github.com/wilsenock220/award.git```
@@ -66,7 +57,6 @@ Follow the following commands to run the project
 * Install required files in requirements.txt
 * Run ```python3.6 manage.py runserver```
 `
->>>>>>> 93d0c872df12167f131a84755834542491b0cdf3
 
 #### Create and activate the virtual environment
 bash
@@ -86,14 +76,13 @@ MODE='dev' #set to 'prod' in production
 ALLOWED_HOSTS='.localhost', '.herokuapp.com', '.127.0.0.1'
 DISABLE_COLLECTSTATIC=1
 
-<<<<<<< HEAD
 #### Install dependancies
 Install dependancies that will create an environment for the app to run
 pip install -r requirements.txt#
-=======
+
 ## Support and contact details
 In case of clarification email me at wilsenock220@gmail.com
->>>>>>> 93d0c872df12167f131a84755834542491b0cdf3
+
 
 #### Run chmod a+x start.py
 bash
@@ -113,9 +102,5 @@ Create an issue mentioning the bug you have found
 ## Support and contact details
 Contact [Wilstan  Enock](wilsenock@gmail.com) for further help/support
 ### License
-<<<<<<< HEAD
 [MIT](https://github.com/wilsenock220/award/blob/master/LICENSE)
 Copyright (c)2019 **Wilstan  Enock**
-=======
-Copyright (c) 2019 **Wilstan Onditi**
->>>>>>> 93d0c872df12167f131a84755834542491b0cdf3
