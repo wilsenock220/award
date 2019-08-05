@@ -1,6 +1,6 @@
 virtual/
+oscars/
 .vscode
 .idea
 .*pyc
 .env
-oscars/
