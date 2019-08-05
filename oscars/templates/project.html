@@ -1,51 +1,99 @@
-{% extends 'base.html' %}
+{% load bootstrap3 %}
+{% load static %}
 
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
 
- <div class="w3-container">
-     <h1 class="text-center">{{project.title}}</h1>
-     <hr>
+<head>
+  <meta charset="UTF-8">
 
-   <div class="w3-row-padding" style="height:500px">
-     <img src="{{project.screenshot.cdn_url}}"  class="w3-image" alt=""style="max-height:100%; min-width:100%">
-   </div>
+  <title>Awwwwards</title>
 
-   <div class="w3-panel w3-border w3-light-grey w3-round-large">
-<h3 class="w3-center w3-serif"> Project Details</h3>
-       <hr>
+  {% block styles %}
+  {% bootstrap_css %}
+  <link rel="stylesheet" href="{% static 'css/project.css'%}">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+
+  <link rel="stylesheet" href="https://use.typekit.net/qhm8wqj.css" />
+
+  {% endblock %}
+
+</head>
+{% include 'navbar.html' %}
+
+<body>
+  <h1 class="fancy-link " style="text-align: center"> <strong> <a href="{% url 'home'%}"
+        style="color: #444; text-decoration: none">AWWARDS
+        >>>  </a> </strong>  Project.</h1>
+
+  <div class="w3-container">
+    <h1 class="text-center">{{project.title}}</h1>
+    <hr>
+
+    <div class="w3-row-padding" style="height:500px">
+      <img src="{{project.screenshot.cdn_url}}" class="w3-image" alt="" style="max-height:100%; min-width:100%">
+    </div>
+
+    <div class="w3-panel w3-border w3-light-grey w3-round-large">
+      <h3 class="w3-center w3-serif"> Project Details</h3>
+      <hr>
 
 
-   <div class="w3-row-padding w3-margin">
-       <p><strong>Description:  </strong>{{project.description}}</p>
-       <p><strong>url:  </strong><a href="{{project.url}}" style="color:blue">{{project.url}}</a></p>
+      <div class="w3-row-padding w3-margin">
+        <p><strong>Description: </strong>{{project.description}}</p>
+        <p><strong>url: </strong><a href="{{project.url}}" style="color:blue">{{project.url}}</a></p>
 
-       <div class="w3-row">
+        <div class="w3-row">
 
 
 
-  <table class="w3-table w3-striped w3-bordered">
-    <tr>
-      <th>Design</th>
-      <th>Usablity</th>
-      <th>Content</th>
-    </tr>
-    <tr>
-      <td>{{project.design}}</td>
-      <td>{{project.usability}}</td>
-      <td>{{project.content}}</td>
-    </tr>
+          <table class="w3-table w3-striped w3-bordered">
+            <tr>
+              <th>Design</th>
+              <th>Usablity</th>
+              <th>Content</th>
+            </tr>
+            <tr>
+              <td>{{project.design}}</td>
+              <td>{{project.usability}}</td>
+              <td>{{project.content}}</td>
+            </tr>
 
-  </table>
-</div>
-  <hr>
-   </div>
+          </table>
+        </div>
+        <hr>
+      </div>
 
-   <div class="w3-panel w3-leftbar w3-sand  w3-serif">
-     <p><strong>Posted </strong>{{project.created_on|timesince}} by {{project.owner.username}}
- </p>
-   </div>
-       </div>
+      <div class="w3-panel w3-leftbar w3-sand  w3-serif">
+        <p><strong>Posted </strong>{{project.created_on|timesince}} by {{project.owner.username}}
+        </p>
+      </div>
+    </div>
 
- </div>
+  </div>
 
- {% endblock %}
+  {% block scripts %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  {% bootstrap_javascript %}
+  {% endblock %}
+
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="{% static 'js/oscars.js' %}"></script>
+  {% block javascript %}
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js">
+  </script>
+  <script src="https://use.fontawesome.com/191e478c5e.js"></script>
+  <script src="static/js/gulpfile.js"></script>
+  {% endblock %}
+
+</body>
+
+</html>
