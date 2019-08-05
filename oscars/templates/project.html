@@ -27,56 +27,67 @@
   {% endblock %}
 
 </head>
-{% include 'navbar.html' %}
 
 <body>
   <h1 class="fancy-link " style="text-align: center"> <strong> <a href="{% url 'home'%}"
         style="color: #444; text-decoration: none">AWWARDS
-        >>>  </a> </strong>  Project.</h1>
+        >>> </a> </strong> Project.</h1>
 
   <div class="w3-container">
     <h1 class="text-center">{{project.title}}</h1>
     <hr>
 
-    <div class="w3-row-padding" style="height:500px">
-      <img src="{{project.screenshot.cdn_url}}" class="w3-image" alt="" style="max-height:100%; min-width:100%">
-    </div>
-
-    <div class="w3-panel w3-border w3-light-grey w3-round-large">
-      <h3 class="w3-center w3-serif"> Project Details</h3>
-      <hr>
-
-
-      <div class="w3-row-padding w3-margin">
-        <p><strong>Description: </strong>{{project.description}}</p>
-        <p><strong>url: </strong><a href="{{project.url}}" style="color:blue">{{project.url}}</a></p>
-
-        <div class="w3-row">
-
-
-
-          <table class="w3-table w3-striped w3-bordered">
-            <tr>
-              <th>Design</th>
-              <th>Usablity</th>
-              <th>Content</th>
-            </tr>
-            <tr>
-              <td>{{project.design}}</td>
-              <td>{{project.usability}}</td>
-              <td>{{project.content}}</td>
-            </tr>
-
-          </table>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <img src="{{project.screenshot.cdn_url}}" class="img-fluid" alt="">
         </div>
-        <hr>
-      </div>
 
-      <div class="w3-panel w3-leftbar w3-sand  w3-serif">
-        <p><strong>Posted </strong>{{project.created_on|timesince}} by {{project.owner.username}}
-        </p>
+
+        <div class="col-lg-6">
+          <h3 class="w3-center w3-serif"> Project Details</h3>
+          <hr>
+
+          <div class="content content--card">
+            <div class="card">
+              <h3 class="card__title">Description</h3>
+              <p class="card__body">{{project.description}}</p>
+            </div>
+
+          </div>
+          <div class="w3-row-padding w3-margin">
+            <p><strong>url: </strong><a href="{{project.url}}" style="color:blue">{{project.url}}</a></p>
+
+            <div class="w3-row">
+
+
+
+              <table class="w3-table w3-striped w3-bordered ">
+                <tr>
+                  <th>Design</th>
+                  <th>Usablity</th>
+                  <th>Content</th>
+                </tr>
+                <tr>
+                  <td>{{project.design}}</td>
+                  <td>{{project.usability}}</td>
+                  <td>{{project.content}}</td>
+                </tr>
+
+              </table>
+            </div>
+            <hr>
+          </div>
+
+          <div class="w3-panel w3-leftbar w3-sand  w3-serif">
+            <p><strong>Posted </strong>{{project.created_on|timesince}} by {{project.owner.username}}
+            </p>
+          </div>
+        </div>
       </div>
     </div>
+
+
 
   </div>
 
