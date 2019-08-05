@@ -7,6 +7,12 @@
 
 <div class="w3-container">
     <div class="container">
+        <form class="navbar-form" role="search" action="{% url 'search_results' %}">
+            <input type="text" name="search" placeholder="&#xF002;  Search Project" id="input" class="w3-input" style="font-family: FontAwesome;
+                font-style: normal;
+                font-weight: normal;
+                text-decoration: inherit;">
+        </form>
         <div class="content">
             <h1 class="title">Rate Featured Projects</h1>
 

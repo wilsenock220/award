@@ -30,12 +30,17 @@
 {% include 'navbar.html' %}
 
 <body>
-<h1 class="fancy-link" style="text-align: center">PROFILE.</h1>
+    <h1 class="fancy-link" style="text-align: center">PROFILE.</h1>
     <div class="container">
 
 
 
         <h1 class="button button-one" style="font-size: 25px; color:white">{{profile.profile.full_name}}</h1>
+        <div class="content content--buttons">
+            <p>Upload Your Project</p>
+            <a href="/upload"><button class="button button-one">Upload</button>
+            </a>
+        </div>
         <div class="content content--card">
             <div class="card">
                 {% if profile.profile.profile_pic%}
@@ -49,9 +54,8 @@
 
         </div>
 
-        <div class="w3-display-bottommiddle w3-container">
 
-        </div>
+
 
 
 
